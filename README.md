@@ -1,0 +1,1 @@
+# cap-view-badges
