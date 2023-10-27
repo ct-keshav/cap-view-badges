@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/badges/static/css/main.728b090c.css",
+    "main.js": "/badges/static/js/main.9e2d058a.js",
+    "index.html": "/badges/index.html",
+    "main.728b090c.css.map": "/badges/static/css/main.728b090c.css.map",
+    "main.9e2d058a.js.map": "/badges/static/js/main.9e2d058a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.728b090c.css",
+    "static/js/main.9e2d058a.js"
+  ]
+}
