@@ -2,6 +2,11 @@
 import React from "react";
 import { validate } from "../Utils/ImageUrlValidator";
 
+const vctr = {
+    alt: require("../Images/Altbadge.svg").default,
+    triangle: require("../Images/Triangle.svg").default,
+};
+
 
 const BadgeInfoCard = ({ data, active }) => {
 
@@ -18,7 +23,7 @@ const BadgeInfoCard = ({ data, active }) => {
 
                 <div>
                     <div className="flex items-center justify-start mb-[6px]">
-                        <div className="flex items-center justify-center w-6 h-6 rounded-md bg-neutral_2">  <img src={validate(getUrlOfImage()) ? getUrlOfImage() : "/badges/Altbadge.svg"} className="object-cover w-5 h-5 overflow-hidden rounded-md">
+                        <div className="flex items-center justify-center w-6 h-6 rounded-md bg-neutral_2">  <img src={validate(getUrlOfImage()) ? getUrlOfImage() : vctr.alt} className="object-cover w-5 h-5 overflow-hidden rounded-md">
                         </img></div>
                         <span className="w-[89%] ml-1 overflow-hidden text-sm font-medium leading-5 truncate height-5">{data?.name}</span>
                     </div>
@@ -30,7 +35,7 @@ const BadgeInfoCard = ({ data, active }) => {
             </div>
             {
                 active && (
-                    <img src="/badges/Triangle.svg" className="w-2 h-4 text-start"></img>
+                    <img src={vctr.triangle} className="w-2 h-4 text-start"></img>
                 )
             }
         </div>

@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+
+const vctr = {
+    up: require("../Images/up.svg").default,
+    down: require("../Images/down.svg").default,
+};
+
 const DropDown = ({ title, tags, lable, customerConstraints, badgeConstraints }) => {
 
     const [visible, setVisible] = useState(false);
@@ -99,7 +105,7 @@ const DropDown = ({ title, tags, lable, customerConstraints, badgeConstraints })
                 <span className="font-medium ">{title}</span>
                 <div className="flex items-center">
                     <span className="mr-2 text-character_inactive">{lable} <span className="text-black">{tags === undefined || null ? 0 : tags.length}</span></span>
-                    {visible ? <img src="/badges/up.svg" className="w-3 h-3" /> : <img src="/badges/down.svg" className="w-3 h-3" />}
+                    {visible ? <img src={vctr.up} className="w-3 h-3" /> : <img src={vctr.down} className="w-3 h-3" />}
                 </div>
             </button>
             {visible && <ui className="flex flex-col items-center justify-start w-full pb-3 mt-3 list-none">
@@ -117,7 +123,7 @@ const DropDown = ({ title, tags, lable, customerConstraints, badgeConstraints })
                 <span className="font-medium ">{title}</span>
                 <div className="flex items-center">
                     <span className="mr-2 text-character_inactive">{lable} <span className="text-black">{countMaxEarn(customerConstraints, badgeConstraints)}</span></span>
-                    {visible ? <img src="/badges/up.svg" className="w-3 h-3" /> : <img src="/badges/down.svg" className="w-3 h-3" />}
+                    {visible ? <img src={vctr.up} className="w-3 h-3" /> : <img src={vctr.down} className="w-3 h-3" />}
                 </div>
             </button>
             {visible && countMaxEarn(customerConstraints, badgeConstraints) !== 0 && <ui className="flex flex-col items-start justify-start w-full pb-3 mt-3 list-none">

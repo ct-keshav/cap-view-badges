@@ -4,6 +4,10 @@ import DropDown from "../Utils/DropDown";
 import { formatEpochTimestamp } from "../Utils/EpochConverter";
 import { useStateContext } from '../Context';
 
+const vctr = {
+    alt: require("../Images/Altbadge.svg").default,
+    threeDots: require("../Images/3dots.svg").default,
+};
 
 const BadgeDetails = ({ customeId, type, name, badgeMetaId, description, startOn, expiresOn, earnType, id, badgeConstraints, tags, images, ownership, earnedBadgeId, customerConstraints }) => {
 
@@ -44,14 +48,14 @@ const BadgeDetails = ({ customeId, type, name, badgeMetaId, description, startOn
             <li className="flex items-center justify-between mb-[6px] w-full">
                 <div className="flex items-center">
                     <div className="flex items-center justify-center w-6 h-6 rounded-md bg-neutral_2">
-                        <img src={validate(getUrlOfImage()) ? getUrlOfImage() : "/badges/Altbadge.svg"} className="object-cover w-5 h-5 overflow-hidden rounded-md">
+                        <img src={validate(getUrlOfImage()) ? getUrlOfImage() : vctr.alt} className="object-cover w-5 h-5 overflow-hidden rounded-md">
                         </img>
                     </div>
                     <span className="ml-1 overflow-hidden text-sm font-medium leading-5 truncate height-5 text-character-active w-[200px]">{name}</span>
                 </div>
                 <div className="relative">
                     <button type="button" onClick={handleShowButton}>
-                        <img src="/badges/3dots.svg"></img>
+                        <img src={vctr.threeDots}></img>
                     </button>
                     {showButtons && (
                         <div className="absolute flex flex-col items-center justify-start left-[-110px] mt-1">
