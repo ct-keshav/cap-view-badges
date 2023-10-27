@@ -8,7 +8,7 @@ import { StateContextProvider } from "./Context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <BrowserRouter basename="/badges/">
+    <BrowserRouter>
       <StateContextProvider>
         <App />
       </StateContextProvider>
