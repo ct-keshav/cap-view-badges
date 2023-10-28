@@ -161,7 +161,7 @@ const DropDown = ({ title, tags, lable, customerConstraints, badgeConstraints })
                         <li className="flex items-center justify-between w-full mt-5">
                             <span className="font-medium ">Across member limits</span><span>{countMaxEarnTypes(badgeConstraints)} limits</span>
                         </li>
-                        <span className="mt-1">Max. No. of badges that can be issued to across member</span>
+                        <span className="mt-1">Max. No. of badges that can be issued across member</span>
                     </>
                 )}
 
