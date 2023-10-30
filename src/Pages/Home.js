@@ -56,7 +56,7 @@ const Home = () => {
 
     return !loading ? (
         <div className="flex flex-col items-start justify-start">
-            <div className=" p-5 flex h-[524px] w-[724px] flex-col items-start justify-start bg-icon-white">
+            <div className=" px-5 flex h-[524px] w-[724px] flex-col items-start justify-start bg-icon-white">
                 <div className="flex items-start justify-start gap-2 mb-5">
                     <button
                         type="button"
